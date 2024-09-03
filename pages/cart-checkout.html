@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>L'Learning</title>
+</head>
+
+<body class="bg-neutral-100">
+    <%- include('./layout/header'); -%>
+        <section class="py-lg-11 py-7 pb-0 mt-lg-0 mt-10 position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-5">
+                        <ul class="list-unstyled step-group">
+                            <li><b class="rounded-circle ">1</b> <span>確認訂單</span></li>
+                            <li class="active"><b class="rounded-circle">2</b> <span>訂單資訊</span></li>
+                            <li><b class="rounded-circle">3</b> <span>訂單完成</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8  mb-3">
+                        <ul class="list-group cart-list mb-4">
+                            <li class="list-group-item border-bottom d-flex align-items-center gap-3 py-3 px-5">
+                                <h3 class="fs-5">商品明細</h3> <span class="fw-light">共 2 項課程</span>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card w-100 py-6 flex-row align-items-center justify-content-between">
+                                    <h4 class="fs-7 fw-light"><span
+                                            class="badge text-bg-primary rounded-1 px-1 d-inline-block me-2">1</span>
+                                        使用 HTML、CSS 開發一個網站
+                                    </h4>
+                                    <b class="text-dark d-inline-block me-2">NT$ 1,200</b>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card w-100 py-6  flex-row align-items-center justify-content-between">
+                                    <h4 class="fs-7 fw-light"><span
+                                            class="badge text-bg-primary rounded-1 px-1 d-inline-block me-2">2</span>
+                                        一變應萬變：RWD 響應式網頁設計
+                                    </h4>
+                                    <b class="text-dark d-inline-block me-2">NT$ 1,200</b>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="list-group cart-list pay-type__input-group pb-3">
+                            <li class="list-group-item border-bottom d-flex align-items-center gap-3 py-3 px-5">
+                                <h3 class="fs-5">付款方式</h3>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay1" checked>
+                                <label class="form-check-label" for="RadioPay1">
+                                    信用卡一次付清
+                                    <img src="/assets/images/icons/Type=VISA.png" alt="VISA" height="24" class="me-1">
+                                    <img src="/assets/images/icons/Type=Mastercard.png" alt="Mastercard" height="24"
+                                        class="me-1">
+                                    <img src="/assets/images/icons/Type=JCB.png" alt="JCB" height="24" class="me-1">
+                                </label>
+
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <div class="row g-3">
+                                        <div class="col-12 ">
+                                            <label for="creditCardInputNumber" class="form-label">信用卡卡號 <span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputNumber"
+                                                placeholder="**** **** **** ****">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="creditCardInputDate" class="form-label">信用卡有限期限<span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputDate"
+                                                placeholder="ＭＭ / YY">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="creditCardInputcode" class="form-label">卡片背面後三碼 <span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputcode"
+                                                placeholder="CVC / CVV">
+                                        </div>
+                                        <div class="col">
+                                            <small>
+                                                本公司採用喬睿科技 TapPay
+                                                金流交易系統，消費者刷卡時直接在銀行端系統中交易，本公司不會留下您的信用卡資料，以保障你的權益，資料傳輸過程採用嚴密的 SSL 2048bit
+                                                加密技術保護。
+                                            </small>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay2">
+                                <label class="form-check-label" for="RadioPay2">信用卡分期</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流服務進行辦卡，您所有的交易資訊皆獲得安全保護。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay3">
+                                <label class="form-check-label" for="RadioPay3">LINE Pay</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>使用 LINE Pay 付款，可用 LINE Points 折抵。您將被導入「LINE Pay」付款頁面進行安全結帳。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay4">
+                                <label class="form-check-label" for="RadioPay4">信用卡分期</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流服務進行辦卡，您所有的交易資訊皆獲得安全保護。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay5">
+                                <label class="form-check-label" for="RadioPay5">LINE Pay</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>使用 LINE Pay 付款，可用 LINE Points 折抵。您將被導入「LINE Pay」付款頁面進行安全結帳。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay6">
+                                <label class="form-check-label" for="RadioPay6">街口支付</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>可用街口幣折抵，街口支付全用戶不分等級，使用街利存帳戶付款享筆筆 2% 街口幣，回饋無上限！</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay7">
+                                <label class="form-check-label" for="RadioPay7">ATM 轉帳</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流選擇銀行並取得繳費資訊</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4 ">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay7">
+                                <label class="form-check-label" for="RadioPay7">超商付款</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>超商付款將加收 NT$30 手續費，若募資失敗手續費將不進行退款。</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card">
+                            <h4 class="card-title py-3 px-5 border-bottom text-dark">
+                                發票選項
+                            </h4>
+                            <div class="card-body px-5">
+                                <div class="row gy-5 gx-3">
+                                    <div class="col-12">
+                                        <a href="#" class="btn btn-outline-primary px-6">帶入上次結帳資料</a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="UrserName" class="form-label">姓名 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="UrserName" placeholder="請填寫真實姓名">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="UrserName" class="form-label">聯絡用電子信箱 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="email" class="form-control" id="UrserName" placeholder="請填寫電子信箱">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputState" class="form-label">發票類型</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>電子發票</option>
+                                            <option>統編發票</option>
+                                        </select>
+                                        <small class="d-flex align-items-center mt-1"><img
+                                                src="/assets/images/deco/flower-2-blue.svg" width="16"
+                                                class="me-1">如需開立統編，請選擇統編發票</small>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputState" class="form-label">領取方式</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>存在 Learning 中，中獎寄信通知</option>
+                                            <option>統編發票</option>
+                                            <option>自然人憑證</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="input-9" class="form-label">手機載具條碼 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-9"
+                                            placeholder="前面加上 / ，加上 7 個數字及大寫字母字元">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="input-10" class="form-label">公司抬頭 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司抬頭">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="input-10" class="form-label">公司統編 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司統編">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label for="input-10" class="form-label">郵遞區號 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入郵遞區號">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <label for="input-10" class="form-label">公司地址 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司地址">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4 d-lg-block d-none">
+                        <div class="card border-0 p-4 shadow-sm">
+                            <h4 class="card-title fs-5 mb-6">訂單明細</h4>
+                            <div class="d-flex justify-content-between pb-6 border-bottom">
+                                <span>2 項課程小計</span>
+                                <b>NT$ 3,600</b>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end pt-6 mb-6">
+                                <span>總計</span>
+                                <b class="fs-3">NT$ 3,600</b>
+                            </div>
+                            <button type="button" class="btn btn-primary mb-3">同意並付款</button>
+                            <small>確認購買即表示您已審閱 Learning 所提供之購物相關條款，並同意條款內容。</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mobile-cart-bar d-lg-none sticky-bottom bottom-0 w-100 d-flex align-items-center justify-content-between bg-white py-2 px-3">
+                <button type="button" class="btn text-start flex-grow-1" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <small class="fs-9 d-flex align-items-center">
+                        展開明細
+                        <span class="material-symbols-outlined fs-7">
+                            keyboard_arrow_up
+                        </span>
+                    </small>
+                    <b class="fs-6 d-block">NT$ 3,600</b>
+                </button>
+                <a href="#" class="btn btn-primary">同意並付款</a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade modal-cart" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-0 rounded-top">
+                        <div class="modal-header bg-neutral-200 ">
+                            <h6 class="modal-title fs-7" id="exampleModalLabel">訂單明細</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body py-5">
+                            <div class="d-flex justify-content-between pb-5 border-bottom">
+                                <span>2 項課程小計</span>
+                                <b>NT$ 3,600</b>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end pt-5 mb-5">
+                                <span>總計</span>
+                                <b class="fs-3">NT$ 3,600</b>
+                            </div>
+                            <small>確認購買即表示您已審閱 Learning 所提供之購物相關條款，並同意條款內容。</small>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn text-start flex-grow-1 p-0" data-bs-dismiss="modal">
+                                <small class="fs-9 d-flex align-items-center">
+                                    展開明細
+                                    <span class="material-symbols-outlined fs-7">
+                                        keyboard_arrow_down
+                                    </span>
+                                </small>
+                                <b class="fs-6 d-block">NT$ 3,600</b>
+                            </button>
+                            <button type="button" class="btn btn-primary mb-3">同意並付款</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <%- include('./layout/footer'); -%>
+            <script type="module" src="../main.js"></script>
+</body>
+
+</html>

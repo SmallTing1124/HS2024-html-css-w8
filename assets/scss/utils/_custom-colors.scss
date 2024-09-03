@@ -1,0 +1,68 @@
+// Primary 顏色
+$primary: #0068FF; // 基色
+$primary-dark: #003BB7; // 深色
+$primary-300: #3F95FF; // 較淺的基色
+$primary-200: #66B1FF; // 淺色
+$primary-100: #99CFFF; // 更淺色
+$primary-10: #E5F4FF; // 最淺色
+
+// Success 顏色
+$success: #7CD31F; // 基色
+$success-dark: #48970F; // 深色
+$success-200: #DDFAA5; // 淺色
+$success-100: #F0FCD1; // 更淺色
+
+// Info 顏色
+$info: #2AAFFC; // 基色
+$info-dark: #1566B5; // 深色
+$info-200: #A9EFFE; // 淺色
+$info-100: #D4F9FE; // 更淺色
+
+// Alert 顏色
+$alert: #FF3A55; // 基色
+$alert-dark: #B71D4F; // 深色
+$alert-200: #FFBBB0; // 淺色
+$alert-100: #FFE0D7; // 更淺色
+
+$neutral-400 :#4B4B4B;  // 80
+$neutral-300 :#909090;  // 60
+$neutral-200 :#ECECEC;  // 40
+$neutral-100 :#F9F9F9;  // 10
+
+
+
+
+
+$custom-colors: (
+    "primary":$primary, // 100
+    "primary-dark":$primary-dark,  // 120
+    "primary-300":$primary-300,  //80
+    "primary-200":$primary-200, // 60 
+    "primary-100":$primary-100, // 40
+    "primary-10":$primary-10,
+
+    "success":$success,  // 100
+    "success-dark":$success-dark,  // 120
+    "success-200":$success-200,  //20
+    "success-100":$success-100, //10
+
+    "info":$info, // 100
+    "info-dark":$info-dark,  //120
+    "info-200":$info-200, //20
+    "info-100":$info-100, //10
+
+    "alert":$alert, 
+    "alert-dark":$alert-dark,
+    "alert-200":$alert-200,
+    "alert-100":$alert-100,
+
+    "neutral-400":$neutral-400,
+    "neutral-300":$neutral-300,
+    "neutral-200":$neutral-200,
+    "neutral-100":$neutral-100,
+
+    "gray":$neutral-200,
+);
+
+// 合併色票    
+$theme-colors: map-merge($theme-colors, $custom-colors);

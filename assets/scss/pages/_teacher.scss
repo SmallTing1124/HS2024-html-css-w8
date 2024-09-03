@@ -1,0 +1,35 @@
+.teacher-infobox {
+    transform: translateY(-80px);
+    @include media-breakpoint-down(lg) {
+        transform: translateY(-30px);
+    }
+
+    .avatar-img {
+        width: 240px;
+        height: 240px;
+        padding: 20px;
+
+        @include media-breakpoint-down(lg) {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+
+        }
+    }
+
+    .text-box {
+
+        padding-top: 160px;
+
+        @include media-breakpoint-down(lg) {
+
+            padding-top: 24px;
+        }
+    }
+}

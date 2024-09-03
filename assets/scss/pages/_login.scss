@@ -1,0 +1,39 @@
+.login-area {
+    .image-box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 728px;
+        max-width: 40%;
+        height: calc(100vh - 80px);
+        position: relative;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5) url('/assets/images/login.jpg') no-repeat center center;
+        background-blend-mode: overlay;
+        background-size: cover;
+        z-index: 0;
+        flex-shrink: 0;
+
+        &::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            z-index: -1;
+            background-image: url(/assets/images/deco/flower-2-blue.svg);
+        }
+
+        &::after {
+            content: '';
+            z-index: -1;
+            width: 528px;
+            height: 528px;
+            position: absolute;
+            right: -210px;
+            bottom: -210px;
+            background-image: url(/assets/images/deco/flower-blue.svg);
+        }
+    }
+}
