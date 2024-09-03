@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>L'Learning</title>
+  <script type="module" crossorigin src="/HS2024-html-css-w8/assets/main-268562a8.js"></script>
+  <link rel="stylesheet" href="/HS2024-html-css-w8/assets/main-a94889e1.css">
+</head>
+
+<body class="bg-neutral-100">
+    <header class="pt-lg-7 pb-lg-3 ">
+    <nav
+        class="desktop-navbar d-lg-flex d-none navbar navbar-expand-lg bg-white rounded-pill shadow py-3 px-7 position-relative">
+        <a class="navbar-brand me-5" href="index.html">
+            <img src="data:image/png;base64,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" alt="L'Learning">
+        </a>
+        <button class="btn dropdown-toggle px-5" type="button" data-bs-toggle="dropdown" data-bs-close="outside"
+            aria-expanded="false">探索</button>
+        <div class="dropdown-menu position-absolute mt-2 start-50 translate-middle-x">
+            <div class="d-flex bg-white">
+                <ul class="list-unstyled dropdown-menu-list dropdown-menu-list__first bg-neutral-100">
+                    <li class="mb-2"><span class="dropdown-item-text">探索全部</span></li>
+                    <li><a class="dropdown-item" href="#">音樂</a></li>
+                    <li><a class="dropdown-item" href="#">攝影</a></li>
+                    <li><a class="dropdown-item" href="#">程式</a></li>
+                    <li><a class="dropdown-item" href="#">藝術</a></li>
+                    <li><a class="dropdown-item" href="#">人文</a></li>
+                    <li><a class="dropdown-item" href="#">行銷</a></li>
+                    <li><a class="dropdown-item" href="#">投資理財</a></li>
+                    <li><a class="dropdown-item" href="#">心靈成長</a></li>
+                    <li><a class="dropdown-item" href="#">職場技能</a></li>
+                    <li><a class="dropdown-item" href="#">生活品味</a></li>
+                </ul>
+                <ul class="list-unstyled dropdown-menu-list dropdown-menu-list__second border-start border-end">
+                    <li class="mb-2"><span class="dropdown-item-text" href="courses.html">所有程式</span></li>
+                    <li><a class="dropdown-item" href="#">程式入門</a></li>
+                    <li><a class="dropdown-item" href="#">網頁前端</a></li>
+                    <li><a class="dropdown-item" href="#">網頁後端</a></li>
+                    <li><a class="dropdown-item" href="#">網站架設</a></li>
+                    <li><a class="dropdown-item" href="#">資訊安全</a></li>
+                    <li><a class="dropdown-item" href="#">程式語言</a></li>
+                    <li><a class="dropdown-item" href="#">遊戲開發</a></li>
+                    <li><a class="dropdown-item" href="#">資料科學</a></li>
+                    <li><a class="dropdown-item" href="#">人工智慧</a></li>
+                    <li><a class="dropdown-item" href="#">量化分析</a></li>
+                </ul>
+                <ul class="list-unstyled dropdown-menu-list dropdown-menu-list__third px-5 py-2">
+                    <li class="pb-3  d-flex gap-2 align-items-center fw-semibold text-neutral-400">
+                        <img src="/HS2024-html-css-w8/assets/ic_fire-95ebfa62.svg" alt="熱門" width="24">
+                        熱門網頁前端課程
+                    </li>
+                    <li>
+                        <a href="courses-detail.html" class="d-flex gap-2 border-top pt-3">
+                            <div class="course-cover position-relative">
+                                <span class="badge text-bg-alert fw-normal position-absolute">8折</span>
+                                <img src="/HS2024-html-css-w8/assets/course-5-18abd620.png" alt="小白也會！從零開始學習 Python 程式設計" width="100"
+                                    height="100" class="object-fit-cover rounded">
+                            </div>
+                            <div class="course-text">
+                                <p class="mb-3 fw-semibold text-black">小白也會！從零開始學習 Python 程式設計</p>
+                                <div class="d-flex border-bottom justify-content-between pb-1">
+                                    <div class="d-flex align-items-center gap-2 ">
+                                        <img src="/HS2024-html-css-w8/assets/avatar-2-d1f6f03d.png" alt="avatar" width="32"
+                                            class="teacher-cover">
+                                        <p class="teacher-name text-black">Kelly Hsu</p>
+                                    </div>
+                                    <div class="course-price text-end">
+                                        <b class="text-primay d-block">NT$ 2,480</b>
+                                        <small class="text-neutral-300 text-decoration-line-through">NT$ 3,200</small>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex py-1 align-items-center justify-content-between align-content-center text-neutral-300">
+                                    <small>已有 420 位同學加入</small>
+                                    <div class="d-flex align-content-center">
+                                        <span
+                                            class="fs-sm material-symbols-outlined icon-filled text-warning">star</span>
+                                        <span class="fs-sm text-black d-inline-block">4.0 </span> (333)
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses-detail.html" class="d-flex gap-2 border-top pt-3">
+                            <div class="course-cover position-relative">
+                                <span class="badge text-bg-alert fw-normal position-absolute">8折</span>
+                                <img src="/HS2024-html-css-w8/assets/course-5-18abd620.png" alt="小白也會！從零開始學習 Python 程式設計" width="100"
+                                    height="100" class="object-fit-cover rounded">
+                            </div>
+                            <div class="course-text">
+                                <p class="mb-3 fw-semibold text-black">小白也會！從零開始學習 Python 程式設計</p>
+                                <div class="d-flex border-bottom justify-content-between pb-1">
+                                    <div class="d-flex align-items-center gap-2 ">
+                                        <img src="/HS2024-html-css-w8/assets/avatar-2-d1f6f03d.png" alt="avatar" width="32"
+                                            class="teacher-cover">
+                                        <p class="teacher-name text-black">Kelly Hsu</p>
+                                    </div>
+                                    <div class="course-price text-end">
+                                        <b class="d-block text-neutral-300 fw-semibold">已購買</b>
+                                        <small class="text-neutral-300 text-decoration-line-through">NT$ 3,200</small>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex py-1 align-items-center justify-content-between align-content-center text-neutral-300">
+                                    <small>已有 420 位同學加入</small>
+                                    <div class="d-flex align-content-center">
+                                        <span
+                                            class="fs-sm material-symbols-outlined icon-filled text-warning">star</span>
+                                        <span class="fs-sm text-black d-inline-block">4.0 </span> (333)
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses-detail.html" class="d-flex gap-2 border-top pt-3">
+                            <div class="course-cover position-relative">
+                                <span class="badge text-bg-alert fw-normal position-absolute">8折</span>
+                                <img src="/HS2024-html-css-w8/assets/course-5-18abd620.png" alt="小白也會！從零開始學習 Python 程式設計" width="100"
+                                    height="100" class="object-fit-cover rounded">
+                            </div>
+                            <div class="course-text">
+                                <p class="mb-3 fw-semibold text-black">小白也會！從零開始學習 Python 程式設計</p>
+                                <div class="d-flex border-bottom justify-content-between pb-1">
+                                    <div class="d-flex align-items-center gap-2 ">
+                                        <img src="/HS2024-html-css-w8/assets/avatar-2-d1f6f03d.png" alt="avatar" width="32"
+                                            class="teacher-cover">
+                                        <p class="teacher-name text-black">Kelly Hsu</p>
+                                    </div>
+                                    <div class="course-price text-end">
+                                        <b class="text-primay d-block">NT$ 2,480</b>
+                                        <small class="text-neutral-300 text-decoration-line-through">NT$ 3,200</small>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex py-1 align-items-center justify-content-between align-content-center text-neutral-300">
+                                    <small>已有 420 位同學加入</small>
+                                    <div class="d-flex align-content-center">
+                                        <span
+                                            class="fs-sm material-symbols-outlined icon-filled text-warning">star</span>
+                                        <span class="fs-sm text-black d-inline-block">4.0 </span> (333)
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <form class="search-group d-flex align-items-center px-1 position-relative rounded-4 " role="search">
+            <span class="material-symbols-outlined position-absolute top-50 translate-middle-y ">search</span>
+            <input class="form-control border-0 ps-7 py-4 bg-white" type="search" placeholder="搜尋各種音樂、數學、程式及設計課程"
+                aria-label="Search">
+            <button class="btn btn-primary py-2 flex-shrink-0" type="submit">搜尋</button>
+        </form>
+
+        <div class="ms-auto d-flex gap-1 align-items-center">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle dropdown-not-arrow position-relative" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="position-relative lh-1">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle bg-primary border border-light rounded-circle"
+                            style="padding: 4px;">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                </button>
+                <ul class="dropdown-menu notify-menu start-50 translate-middle-x mt-6 bg-white">
+                    <li>
+                        <a class="dropdown-item fs-sm  border-bottom link-primary d-flex align-items-center justify-content-end gap-2"
+                            href="#">
+                            <span
+                                class="material-symbols-outlined fs-xs rounded-circle bg-primary text-white">check_small</span>
+                            全部標記為已讀
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                            <span class="material-symbols-outlined p-2 bg-info-100 rounded-circle  text-info">
+                                campaign
+                            </span>
+                            <div class="text-wrap">
+                                <p class="mb-2">
+                                    系統通知：6 月 30 日 02:00 網站系統排程更新
+                                </p>
+                                <time datetime="" class="text-neutral-300 fs-sm">4 天前</time>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                            <span class="material-symbols-outlined p-2 bg-alert-100 rounded-circle  text-alert">
+                                notifications_active
+                            </span>
+                            <div class="text-wrap">
+                                <p class="mb-2">
+                                    募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！
+                                </p>
+                                <time datetime="" class="text-neutral-300 fs-sm">7 天前</time>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                            <span class="material-symbols-outlined p-2 bg-alert-100 rounded-circle  text-alert">
+                                notifications_active
+                            </span>
+                            <div class="text-wrap">
+                                <p class="mb-2">
+                                    募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！
+                                </p>
+                                <time datetime="" class="text-neutral-300 fs-sm">7 天前</time>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="cart.html" class="btn px-2 py-1 p-0 lh-1">
+                <div class="position-relative">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge px-1 bg-primary border border-white border-1">
+                        2
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
+            </a>
+            <a href="login.html" class="btn btn-primary px-6">登入 / 註冊</a>
+            <div class="dropdown position-static">
+                <a href="#" class="dropdown-toggle d-flex align-items-center  dropdown-not-arrow"
+                    data-bs-toggle="dropdown" role="button">
+                    <div class="flex-shrink-0">
+                        <img src="/HS2024-html-css-w8/assets/avatar-1-cf59f6fa.png" alt="avatar" width="44">
+                    </div>
+                    <div class="flex-grow-1 ms-3 text-neutral-400 fw-semibold">
+                        Jessica
+                    </div>
+                </a>
+
+                <ul class="dropdown-menu position-absolute top-100 end-0 mt-1" style="left: auto; width: 237px;">
+                    <li class="pt-1">
+                        <a class="dropdown-item-text d-flex align-items-center border-bottom px-2 py-1" href="#">
+                            <div class="flex-shrink-0">
+                                <img src="/HS2024-html-css-w8/assets/avatar-1-cf59f6fa.png" alt="avatar" width="44">
+                            </div>
+                            <div class="flex-grow-1 ms-3 text-neutral-400 fw-semibold">
+                                Jessica
+                                <small class="d-block text-neutral-300 fw-normal">學習初心者</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="px-2 py-3 pt-3 border-bottom">
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined">account_circle</span>個人檔案
+                        </a>
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined icon-filled">bookmark</span>我的收藏
+                        </a>
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined">settings</span>帳號設定
+                        </a>
+                    </li>
+                    <li class="px-2 py-3 pt-3 border-bottom">
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="member-courses.html">
+                            <span class="material-symbols-outlined icon-filled">folder</span>我的課程
+                        </a>
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined">list_alt</span>訂單記錄
+                        </a>
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined icon-filled">edit</span>作業成果
+                        </a>
+                    </li>
+                    <li class="px-2 py-3 pb-5 pt-3 border-bottom">
+                        <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                            <span class="material-symbols-outlined">logout</span>登出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="mobile-navbar d-lg-none navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="data:image/png;base64,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" alt="L'Learning">
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <div class="dropdown position-static">
+                    <button class="btn dropdown-toggle dropdown-not-arrow" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="position-relative lh-1">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle bg-primary border border-light rounded-circle"
+                                style="padding: 4px;">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu bg-white vw-100 position-absolute top-0 mt-10 start-0 border-radius-0">
+                        <li>
+                            <a class="dropdown-item fs-sm  border-bottom link-primary d-flex align-items-center justify-content-end gap-2"
+                                href="#">
+                                <span
+                                    class="material-symbols-outlined fs-xs rounded-circle bg-primary text-white">check_small</span>
+                                全部標記為已讀
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                                <span class="material-symbols-outlined p-2 bg-info-100 rounded-circle  text-info">
+                                    campaign
+                                </span>
+                                <div class="text-wrap">
+                                    <p class="mb-2">
+                                        系統通知：6 月 30 日 02:00 網站系統排程更新
+                                    </p>
+                                    <time datetime="" class="text-neutral-300 fs-sm">4 天前</time>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                                <span class="material-symbols-outlined p-2 bg-alert-100 rounded-circle  text-alert">
+                                    notifications_active
+                                </span>
+                                <div class="text-wrap">
+                                    <p class="mb-2">
+                                        募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！
+                                    </p>
+                                    <time datetime="" class="text-neutral-300 fs-sm">7 天前</time>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-start gap-3 px-3" href="#">
+                                <span class="material-symbols-outlined p-2 bg-alert-100 rounded-circle  text-alert">
+                                    notifications_active
+                                </span>
+                                <div class="text-wrap">
+                                    <p class="mb-2">
+                                        募資開課：您購買的募資課程已成功開課！將於 3 天後公布課綱！
+                                    </p>
+                                    <time datetime="" class="text-neutral-300 fs-sm">7 天前</time>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn py-2 px-3">
+                    <div class="position-relative lh-1">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge px-1 bg-primary border border-white border-1">
+                            2<span class="visually-hidden">unread messages</span>
+                        </span>
+                    </div>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <ul class="nav nav-underline nav-justified border-bottom">
+                    <li class="nav-item">
+                        <a class="nav-link py-3 px-0 active" data-bs-toggle="tab" href="#tab-pane-navbar">探索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-3 px-0" data-bs-toggle="tab" href="#tab-pane-member">我的會員</a>
+                    </li>
+                </ul>
+                <div class="tab-content h-100">
+                    <div class="tab-pane fade show active" id="tab-pane-navbar" tabindex="0">
+                        <div class="tab-pane-meun position-relative">
+                            <ul class="tab-nav-menu-list tab-nav-menu-list__first list-unstyled px-3 py-5">
+                                <li class="mb-1"><span class="tab-nav-item-text">探索全部</span></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">音樂</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">攝影</a></li>
+                                <li>
+                                    <a class="tab-nav-item dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false" href="#">程式</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item-text dropdown-item-back text-center" href="#">
+                                                程式入門
+                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">網頁前端</a></li>
+                                        <li><a class="dropdown-item" href="#">網頁後端</a></li>
+                                        <li><a class="dropdown-item" href="#">網站架設</a></li>
+                                        <li><a class="dropdown-item" href="#">資訊安全</a></li>
+                                        <li><a class="dropdown-item" href="#">程式語言</a></li>
+                                        <li><a class="dropdown-item" href="#">遊戲開發</a></li>
+                                        <li><a class="dropdown-item" href="#">資料科學</a></li>
+                                        <li><a class="dropdown-item" href="#">人工智慧</a></li>
+                                        <li><a class="dropdown-item" href="#">量化分析</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">藝術</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">人文</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">行銷</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">投資理財</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">心靈成長</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">職場技能</a></li>
+                                <li><a class="tab-nav-item dropdown-toggle" href="#">生活品味</a></li>
+                            </ul>
+                        </div>
+                        <div class="px-5 py-2 border-top position-absolute bottom-0 w-100 bg-white">
+                            <a class="btn btn-primary d-flex align-items-center gap-1  py-2 px-5 w-100 " href="login.html">
+                                登入 / 註冊
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade position-relative" id="tab-pane-member" tabindex="0">
+                        <ul class="tab-pane-meun list-unstyled mb-0 px-3 py-5">
+                            <li>
+                                <a class="d-flex align-items-center border-bottom pb-3" href="#">
+                                    <div class="flex-shrink-0">
+                                        <img src="/HS2024-html-css-w8/assets/avatar-1-cf59f6fa.png" alt="avatar" width="44">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3 text-neutral-400 fw-semibold">
+                                        Jessica
+                                        <small class="d-block text-neutral-300 fw-normal">學習初心者</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="py-3 pt-3 border-bottom">
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                                    <span class="material-symbols-outlined">account_circle</span>個人檔案
+                                </a>
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                                    <span class="material-symbols-outlined icon-filled">bookmark</span>我的收藏
+                                </a>
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                                    <span class="material-symbols-outlined">settings</span>帳號設定
+                                </a>
+                            </li>
+                            <li class="px-2 py-3 pt-3 ">
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="member-courses.html">
+                                    <span class="material-symbols-outlined icon-filled">folder</span>我的課程
+                                </a>
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                                    <span class="material-symbols-outlined">list_alt</span>訂單記錄
+                                </a>
+                                <a class="btn btn-light d-flex align-items-center gap-1" href="#">
+                                    <span class="material-symbols-outlined icon-filled">edit</span>作業成果
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="px-5 py-2 border-top position-absolute bottom-0 w-100 bg-white">
+                            <a class="btn btn-light d-flex align-items-center gap-1  py-2 px-5 w-100 " href="index.html">
+                                <span class="material-symbols-outlined">logout</span>登出
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>        <section class="py-lg-11 py-7 pb-0 mt-lg-0 mt-10 position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-5">
+                        <ul class="list-unstyled step-group">
+                            <li><b class="rounded-circle ">1</b> <span>確認訂單</span></li>
+                            <li class="active"><b class="rounded-circle">2</b> <span>訂單資訊</span></li>
+                            <li><b class="rounded-circle">3</b> <span>訂單完成</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8  mb-3">
+                        <ul class="list-group cart-list mb-4">
+                            <li class="list-group-item border-bottom d-flex align-items-center gap-3 py-3 px-5">
+                                <h3 class="fs-5">商品明細</h3> <span class="fw-light">共 2 項課程</span>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card w-100 py-6 flex-row align-items-center justify-content-between">
+                                    <h4 class="fs-7 fw-light"><span
+                                            class="badge text-bg-primary rounded-1 px-1 d-inline-block me-2">1</span>
+                                        使用 HTML、CSS 開發一個網站
+                                    </h4>
+                                    <b class="text-dark d-inline-block me-2">NT$ 1,200</b>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="card w-100 py-6  flex-row align-items-center justify-content-between">
+                                    <h4 class="fs-7 fw-light"><span
+                                            class="badge text-bg-primary rounded-1 px-1 d-inline-block me-2">2</span>
+                                        一變應萬變：RWD 響應式網頁設計
+                                    </h4>
+                                    <b class="text-dark d-inline-block me-2">NT$ 1,200</b>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="list-group cart-list pay-type__input-group pb-3">
+                            <li class="list-group-item border-bottom d-flex align-items-center gap-3 py-3 px-5">
+                                <h3 class="fs-5">付款方式</h3>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay1" checked>
+                                <label class="form-check-label" for="RadioPay1">
+                                    信用卡一次付清
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANlSURBVHgB7ZhdSJNRGMefQhCSJshUhC29zU0Q6kYNsYto3mVl8yZIMHYnlXUTUpTSjZ/UlRpY4EVT1Dv3cRFhbBIoCNv0Vp2g4hAUDLyy8z++5+y8q5FMYbx4fjDes+2853n+z9c7RqTRaDSai8yloaGhKrvdPl5eXt5EFmJra2t5b2+vpaCkpGS2tbW1trCwkKzE0dFR7dTU1PjliooKyzkP4HNZWVnTZbI4WkC+0QLyjRaQbwqyffFtcp6i0VVKJnflZy53JfW+e2za96R9kPYPfvN1D/susrBKweAif/+y6wE11F/n60h0hfoHZiiW2KCDg0Oy2YqoxnWNvo6/YOsr8ry+gWluN5u9Uwtoe9TIXxDS/WaCG4Vzvo5mcjrt0qm50BJfO52l5GYG+wdn+D4uQHGqjzmvIs5Tncd56r54Yj13AaoQv39eOhVPrEkB/smfct+rrvv8uq5krIYJ2kimTE75nnrI4Silzc1dSm7smmyp5wFkNsnuF/ZyEgCaPTelgCi74j0Qn4GGupNSSbCogWIWWUQ3c09PlohCKLINUF7IEFAD9i9O1cQuV6Vci6gFWOmI/kCWUEJxVt8Ct3GP7apSIkxM57MRHtVMgqFFuf407JPrqBKAnAWgEREVEFs5cTIQSBv0MgEguZkuCfSDuFdkByDK9x720uhYwGRjZCzIrwhEs+eGtJdZZjkJAJgY/EAWdbxEumFQTJp4fE3udzrSaf/CJk2bIVKc0f12gjXtSXTVbPo67prsRc4jA0DUPVCbUjQvSCgl5HJVyTX64SMri6Vfw1ywYMzIAoaEwFZcxIXhCkQjn1lAfX21XIvoA7U89vcPTU6L54MAzve+TzcxvkfzzgXT5YgeaWElFlA+iyysUDZONYWAm6VUnQ5ANK8gZmQAzqMHMNc7n49ykWIQjH4Oyv1ebyN7uE3/z7ScbGcSAG6xWlej5VXqGtEU4hyGKJQU75fk342IKYUAqOX4PfyBio3SAbfvvOZnxuPnJMDDpoMoE2RDNC9QHzg1RrQRdUQ/8+cDyhG9EwjiKX7M72uoq5aTS4CAxdhzILMUTYTD4WOrEgqFjvXP6XyjBeQbLSDfWF/Azs7OD/ZHKVkN+Ly9vb1ckEql2v1+/yz+5CULgcCzv9fbSaPRaDQXmj94dUApKQg67gAAAABJRU5ErkJggg==" alt="VISA" height="24" class="me-1">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAP7SURBVHgB7ZjPTxNpGMe/Mx0o1lJIQ/gRqnLwsuWw3ROYvZDsIrun3VVK4mlhda8rkt3sZX808Q+oelaKRyj+uBY0IfEgeNIDxUQPGMdQEqza+oPSzozv89aSKLTzDCEmjfNJ3syv5535Pu/zvjPPM4CLi4uLy5eMEo/He9ra2hIdHR0DqCPW1tbuZ7PZX7RgMHgjGo1GvF4v6olCoRBJJpMJtaurq+7EE6S5vb19QEWdo2GPFBfuonB1BlsLizBXn8pzas8haJEwvD8PwfvryLattZWD+WgGZuYuzGwa1uuyvRLshRoMQz38AzxHhrAXlLm5OWtwcJDdwXiwjNfjMelALTzCGV/sHLSBFpTuxbZFVxXiP4TGH2fklovQDkdTiEb85UDUVjxhiKgY8d9hJUZsxRNkU0geg/F4Bk5gT6GtmynkRye45vB9nYcvkgNWy8elI82sfsU7EzIKaucxlj0rAjTH35yLgYvHb5TFf0BbzUF9WWD3L94+LdcNB5YDm1eTckpw8X/7Ysc57UkeXEi8sXyZZctyoDCVBBca/YbOnaNNEVAKBrgY6X1ygBask9HfTXwFz8YmuFAUrOyyrZ2tA8aqDid4gsWq15TNEpxgPt8HB5yiNprVL5ZqXNvr8/A50fb/cbZ39PSE4IRStqHqNavJWeaiNNt/lW0d0CK9UFoD4FLLAbOFn/UqjQHWx8zWARLfNDoCLsWMV7ZPMf0NovEjoB7mJXesSXng7GlHUXj7YGfaYHT7wYVGX/uGl7awHKA0+eD//DyIIvBu5eD2MeVBRqeP3Z/Ec7NS9muhafwMfA6ceHOvVTphdPhQ6uFHj8R7wmfY9o7ea77YBJoTcZnr2yGn3KkLsE6dBweaNg3fXREvDf4gEY4rMu9oVDbKjzZFffBpbUBvrcafhnBARKyybjxHoyLPT8J8khIV2cdfV3rTUDWmHh2RTjjFcUW2G5WSUmltYS327ZLSQfW1G44rsmrQIqdWEb+STte0J+G1xF+fvQYu7Cl06cJF5HI5hELdYpvHH+NnMTU5KfdPDJ/ELTEatN/X3ydt//nvX+HICnRdx0lxPTGZkNulxUUEAgF8FQ5jfm4elrh3r9jX9af4/vhxKX5e3IvuyYEdARIy+tuYFBkKhaR4EkHtoRC6tLgk7fr6+2XrFjbz0qlXckuidf2ZtD8xPIxrQigNwkMRrbRo1GdKOEnn6P5c9jyF6IE0gtdnZ+UxCX6ml1NvmkLUKGKBQIsc2XKfPtmHhFIkKVIVmoWDdO7vP/9CPscrJyW0iOuVVCpl1f2fOXV9fX1B/ChFvUGaM5nMfW1jY2Nsenr6Bv3kRR1BAy9+r4/BxcXFxeWL5j1EwUONBsSt9QAAAABJRU5ErkJggg==" alt="Mastercard" height="24"
+                                        class="me-1">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOaSURBVHgB7ZhdSFNhGMf/6tTm/GLqbGq2UPNCyGVldFFuCEGGSRfWRRdqGQRe6E134WcXQYFoIAaVChaYhETpraMgSykmJKSCH5RuUxvT6aZtZu973JbTub2bkxieHxzO4Tnvznme57zn/f93AB4eHh6eg0xQY2OjLD4+vi0xMVGBAEKj0aj1ev1VgVgs7ikuLpaHh4cjkFhbW5N3d3e3BUul0oBLnkJzlkgkimAEOAKWQcMzRlS9/g71z2UYzJYd52ViISbrznPH61Ma/Lp5H7+Hx/HHYHR5vdT1AW5vshrxarQVqh9vsWJxPbYlvxcJEUnwuQCavPzBAFigyevyK2Ale0/Mm2dR8/E25k2z2Asep1Bp5zewYqh/xpQ85d3Eyz0nT3FbgMFsJdPGCFZMb94zj51eHIU/8FCABd6wYWAvds48A38Q8KsQX4A7gmKjuG0/YdKB7VQpjqKSbHaUzUPcPkQmRXTldQivXICAHG+F6oJFPcZpBKX23FOX1zYRPRjU9aN79AlY8KmA2AgBZHGHdsSlXzoQbOv4muorjM1dWDcsIyQ2EsKiPKeiJDZxah95SERsGaLQSFzLvMPFZTGZXKxv4oWnVHwrYDfsya909JFONzid222JHdT2Ez3Y1I4ziUpkxZ/eHG9ZAgt+LcDOKuk+KxXyem4vEkRxnafQ6UPtBQv7UoA3TC2OYcW6qR+isCgkCJOgOFKIyaVRDJGn4wmfViGZ+N/8p2q9ncjSApe/c7Ui9U52ko63clu/revUvFXI68CCwH2imy6z4/MsVON6LpaXLkbJ2WTHmCbVtOOYKjFNMjwvB3HP75F5/4FzpPTlDZNnkPhJaHNKnO6Re1jJvbAUZUqhI26ysqm62wJod6f0qyg6IUHNpTSnuJq41I5PM2gnxdFCKZpTJYipLkdYdjpEJZe5zQ41eeYtL/KczcgVHLvhiG3Y4tNk+rSNPIIfCrBA2TTkFIsVhu7qkazcf4EGsFA7UO5YffaC1++AtwZvv+G90P/GLwW4shW73pDYCm+g2uD2evAD8pRo5rHUE7FClTlCsM8F0O5XKlKZxlK3GlN9C6xUZNd7HOOzlaCOtDQ3GTUFaWRpdX8ZTtyyMyAm4rbdZm9HFEo8UXQmSrPukidwHJ7wqMQbjy+CFfv3HhZa8vvgDwJ/FdLpdCryoRSBBs1Zq9WqBQsLC2VdXV099CMvAgjaePJ5vQw8PDw8PAeav+5CR+oP98bWAAAAAElFTkSuQmCC" alt="JCB" height="24" class="me-1">
+                                </label>
+
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <div class="row g-3">
+                                        <div class="col-12 ">
+                                            <label for="creditCardInputNumber" class="form-label">信用卡卡號 <span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputNumber"
+                                                placeholder="**** **** **** ****">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="creditCardInputDate" class="form-label">信用卡有限期限<span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputDate"
+                                                placeholder="ＭＭ / YY">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="creditCardInputcode" class="form-label">卡片背面後三碼 <span
+                                                    class="text-alert">*</span></label>
+                                            <input type="text" class="form-control" id="creditCardInputcode"
+                                                placeholder="CVC / CVV">
+                                        </div>
+                                        <div class="col">
+                                            <small>
+                                                本公司採用喬睿科技 TapPay
+                                                金流交易系統，消費者刷卡時直接在銀行端系統中交易，本公司不會留下您的信用卡資料，以保障你的權益，資料傳輸過程採用嚴密的 SSL 2048bit
+                                                加密技術保護。
+                                            </small>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay2">
+                                <label class="form-check-label" for="RadioPay2">信用卡分期</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流服務進行辦卡，您所有的交易資訊皆獲得安全保護。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay3">
+                                <label class="form-check-label" for="RadioPay3">LINE Pay</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>使用 LINE Pay 付款，可用 LINE Points 折抵。您將被導入「LINE Pay」付款頁面進行安全結帳。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay4">
+                                <label class="form-check-label" for="RadioPay4">信用卡分期</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流服務進行辦卡，您所有的交易資訊皆獲得安全保護。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay5">
+                                <label class="form-check-label" for="RadioPay5">LINE Pay</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>使用 LINE Pay 付款，可用 LINE Points 折抵。您將被導入「LINE Pay」付款頁面進行安全結帳。</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay6">
+                                <label class="form-check-label" for="RadioPay6">街口支付</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>可用街口幣折抵，街口支付全用戶不分等級，使用街利存帳戶付款享筆筆 2% 街口幣，回饋無上限！</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay7">
+                                <label class="form-check-label" for="RadioPay7">ATM 轉帳</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>下一步將連至第三方金流選擇銀行並取得繳費資訊</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item py-4 ">
+                                <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                    id="RadioPay7">
+                                <label class="form-check-label" for="RadioPay7">超商付款</label>
+                                <div class="alert alert-light border-0 p-5  ms-6 mt-3  mb-0">
+                                    <p>超商付款將加收 NT$30 手續費，若募資失敗手續費將不進行退款。</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card">
+                            <h4 class="card-title py-3 px-5 border-bottom text-dark">
+                                發票選項
+                            </h4>
+                            <div class="card-body px-5">
+                                <div class="row gy-5 gx-3">
+                                    <div class="col-12">
+                                        <a href="#" class="btn btn-outline-primary px-6">帶入上次結帳資料</a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="UrserName" class="form-label">姓名 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="UrserName" placeholder="請填寫真實姓名">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="UrserName" class="form-label">聯絡用電子信箱 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="email" class="form-control" id="UrserName" placeholder="請填寫電子信箱">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputState" class="form-label">發票類型</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>電子發票</option>
+                                            <option>統編發票</option>
+                                        </select>
+                                        <small class="d-flex align-items-center mt-1"><img
+                                                src="/HS2024-html-css-w8/assets/flower-2-blue-0b76205b.svg" width="16"
+                                                class="me-1">如需開立統編，請選擇統編發票</small>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="inputState" class="form-label">領取方式</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>存在 Learning 中，中獎寄信通知</option>
+                                            <option>統編發票</option>
+                                            <option>自然人憑證</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="input-9" class="form-label">手機載具條碼 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-9"
+                                            placeholder="前面加上 / ，加上 7 個數字及大寫字母字元">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="input-10" class="form-label">公司抬頭 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司抬頭">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="input-10" class="form-label">公司統編 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司統編">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label for="input-10" class="form-label">郵遞區號 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入郵遞區號">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <label for="input-10" class="form-label">公司地址 <span
+                                                class="text-alert">*</span></label>
+                                        <input type="text" class="form-control" id="input-10" placeholder="請輸入公司地址">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-4 d-lg-block d-none">
+                        <div class="card border-0 p-4 shadow-sm">
+                            <h4 class="card-title fs-5 mb-6">訂單明細</h4>
+                            <div class="d-flex justify-content-between pb-6 border-bottom">
+                                <span>2 項課程小計</span>
+                                <b>NT$ 3,600</b>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end pt-6 mb-6">
+                                <span>總計</span>
+                                <b class="fs-3">NT$ 3,600</b>
+                            </div>
+                            <button type="button" class="btn btn-primary mb-3">同意並付款</button>
+                            <small>確認購買即表示您已審閱 Learning 所提供之購物相關條款，並同意條款內容。</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mobile-cart-bar d-lg-none sticky-bottom bottom-0 w-100 d-flex align-items-center justify-content-between bg-white py-2 px-3">
+                <button type="button" class="btn text-start flex-grow-1" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <small class="fs-9 d-flex align-items-center">
+                        展開明細
+                        <span class="material-symbols-outlined fs-7">
+                            keyboard_arrow_up
+                        </span>
+                    </small>
+                    <b class="fs-6 d-block">NT$ 3,600</b>
+                </button>
+                <a href="#" class="btn btn-primary">同意並付款</a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade modal-cart" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-0 rounded-top">
+                        <div class="modal-header bg-neutral-200 ">
+                            <h6 class="modal-title fs-7" id="exampleModalLabel">訂單明細</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body py-5">
+                            <div class="d-flex justify-content-between pb-5 border-bottom">
+                                <span>2 項課程小計</span>
+                                <b>NT$ 3,600</b>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-end pt-5 mb-5">
+                                <span>總計</span>
+                                <b class="fs-3">NT$ 3,600</b>
+                            </div>
+                            <small>確認購買即表示您已審閱 Learning 所提供之購物相關條款，並同意條款內容。</small>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn text-start flex-grow-1 p-0" data-bs-dismiss="modal">
+                                <small class="fs-9 d-flex align-items-center">
+                                    展開明細
+                                    <span class="material-symbols-outlined fs-7">
+                                        keyboard_arrow_down
+                                    </span>
+                                </small>
+                                <b class="fs-6 d-block">NT$ 3,600</b>
+                            </button>
+                            <button type="button" class="btn btn-primary mb-3">同意並付款</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer class="bg-dark py-lg-12 py-8 px-5">
+    <div class="container">
+        <div class="row align-items-center mb-lg-3 mb-8">
+            <div class="col-lg-6">
+                <img src="/HS2024-html-css-w8/assets/logo-white-267b8e56.svg" alt="L'Learning" width="200" class="mb-lg-0 mb-7">
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-unstyled d-flex flex-lg-row flex-column gap-6 justify-content-end mb-0">
+                    <li><a href="#" class="link-light">常見問題</a>
+                    <li><a href="#" class="link-light">關於我們</a>
+                    <li><a href="#" class="link-light">隱私權政策</a>
+                    <li><a href="#" class="link-light">使用者條款</a>
+                </ul>
+            </div>
+        </div>
+        <div class="row align-items-end flex-row-reverse">
+           
+            <div class="col-lg-6">
+                <ul class="social-media list-unstyled mb-0 d-flex gap-3 justify-content-lg-end mb-lg-0 mb-7">
+                    <li><a href="#" class="| btn btn-outline-light rounded-circle"><i class="bi bi-line"></i></a></li>
+                    <li><a href="#" class="| btn btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#" class="| btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <small class="fs-lg-8 fs-9">copyright © 2024 LEARNING 課程網站 All Rights Reserved.</small>
+            </div>
+        </div>
+    </div>
+</footer>            
+</body>
+
+</html>
